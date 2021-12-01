@@ -4,43 +4,252 @@ import { Carousel } from 'react-bootstrap';
 
 const Produtos = () => {
     return (
+        <>
         <Carousel fade>
+            
             <Carousel.Item>
-                <img
-                    className="d-block w-100"
-                    src="https://picsum.photos/id/123/2500/600"
-                    alt="First slide"
-                />
-                <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                </Carousel.Caption>
+            <section class="container section-product">
+                    
+                     <article class="container-product">                     
+                       <div class="card">
+                        
+                            <div class="box-info-product">
+                                 <strong>God of War</strong>
+                                 <span>R$ 120,00</span>
+                             </div>
+                             <a class="button-buy-product" href="">
+                                <button>Comprar</button>
+                             </a>
+                         </div>
+                        <div class="card">
+                        
+                            <div class="box-info-product">
+                                <strong>Call of duty</strong>
+                                <span>R$ 120,00</span>
+                             </div>
+                             <a class="button-buy-product" href="">
+                                 <button>Comprar</button>
+                             </a>
+                         </div>
+                         <div class="card">
+                        
+                            <div class="box-info-product">
+                                <strong>GTA 5</strong>
+                                 <span>R$ 180,00</span>
+                             </div>
+                             <a class="button-buy-product" href="">
+                                 <button>Comprar</button>
+                            </a>
+                        </div>
+                     </article>
+               </section>
             </Carousel.Item>
             <Carousel.Item>
-                <img
-                    className="d-block w-100"
-                    src="https://picsum.photos/id/456/2500/600"
-                    alt="Second slide"
-                />
+            <section class="container section-product">
+                    
+                    <article class="container-product">                     
+                      <div class="card">
+                       
+                           <div class="box-info-product">
+                                <strong>God of War</strong>
+                                <span>R$ 120,00</span>
+                            </div>
+                            <a class="button-buy-product" href="">
+                               <button>Comprar</button>
+                            </a>
+                        </div>
+                       <div class="card">
+                       
+                           <div class="box-info-product">
+                               <strong>Injustice</strong>
+                               <span>R$ 120,00</span>
+                            </div>
+                            <a class="button-buy-product" href="">
+                                <button>Comprar</button>
+                            </a>
+                        </div>
+                        <div class="card">
+                       
+                           <div class="box-info-product">
+                               <strong>GTA 5</strong>
+                                <span>R$ 180,00</span>
+                            </div>
+                            <a class="button-buy-product" href="">
+                                <button>Comprar</button>
+                           </a>
+                       </div>
+                    </article>
+              </section>
 
-                <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </Carousel.Caption>
+               
             </Carousel.Item>
             <Carousel.Item>
-                <img
-                    className="d-block w-100"
-                    src="https://picsum.photos/id/678/2500/600"
-                    alt="Third slide"
-                />
+            <section class="container section-product">
+                    
+                    <article class="container-product">                     
+                      <div class="card">
+                       
+                           <div class="box-info-product">
+                                <strong>God of War</strong>
+                                <span>R$ 120,00</span>
+                            </div>
+                            <a class="button-buy-product" href="">
+                               <button>Comprar</button>
+                            </a>
+                        </div>
+                       <div class="card">
+                       
+                           <div class="box-info-product">
+                               <strong>Call of duty</strong>
+                               <span>R$ 120,00</span>
+                            </div>
+                            <a class="button-buy-product" href="">
+                                <button>Comprar</button>
+                            </a>
+                        </div>
+                        <div class="card">
+                       
+                           <div class="box-info-product">
+                               <strong>GTA 5</strong>
+                                <span>R$ 180,00</span>
+                            </div>
+                            <a class="button-buy-product" href="">
+                                <button>Comprar</button>
+                           </a>
+                       </div>
+                    </article>
+              </section>
 
-                <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                </Carousel.Caption>
+                
             </Carousel.Item>
+            
         </Carousel>
+      
+
+
+<Carousel fade>
+    
+    <Carousel.Item>
+    <section class="container section-product">
+            
+             <article class="container-product">                     
+               <div class="card">
+                
+                    <div class="box-info-product">
+                         <strong>God of War</strong>
+                         <span>R$ 120,00</span>
+                     </div>
+                     <a class="button-buy-product" href="">
+                        <button>Comprar</button>
+                     </a>
+                 </div>
+                <div class="card">
+                
+                    <div class="box-info-product">
+                        <strong>Call of duty</strong>
+                        <span>R$ 120,00</span>
+                     </div>
+                     <a class="button-buy-product" href="">
+                         <button>Comprar</button>
+                     </a>
+                 </div>
+                 <div class="card">
+                
+                    <div class="box-info-product">
+                        <strong>GTA 5</strong>
+                         <span>R$ 180,00</span>
+                     </div>
+                     <a class="button-buy-product" href="">
+                         <button>Comprar</button>
+                    </a>
+                </div>
+             </article>
+       </section>
+    </Carousel.Item>
+    <Carousel.Item>
+    <section class="container section-product">
+            
+            <article class="container-product">                     
+              <div class="card">
+               
+                   <div class="box-info-product">
+                        <strong>God of War</strong>
+                        <span>R$ 120,00</span>
+                    </div>
+                    <a class="button-buy-product" href="">
+                       <button>Comprar</button>
+                    </a>
+                </div>
+               <div class="card">
+               
+                   <div class="box-info-product">
+                       <strong>Injustice</strong>
+                       <span>R$ 120,00</span>
+                    </div>
+                    <a class="button-buy-product" href="">
+                        <button>Comprar</button>
+                    </a>
+                </div>
+                <div class="card">
+               
+                   <div class="box-info-product">
+                       <strong>GTA 5</strong>
+                        <span>R$ 180,00</span>
+                    </div>
+                    <a class="button-buy-product" href="">
+                        <button>Comprar</button>
+                   </a>
+               </div>
+            </article>
+      </section>
+
+       
+    </Carousel.Item>
+    <Carousel.Item>
+    <section class="container section-product">
+            
+            <article class="container-product">                     
+              <div class="card">
+               
+                   <div class="box-info-product">
+                        <strong>God of War</strong>
+                        <span>R$ 120,00</span>
+                    </div>
+                    <a class="button-buy-product" href="">
+                       <button>Comprar</button>
+                    </a>
+                </div>
+               <div class="card">
+               
+                   <div class="box-info-product">
+                       <strong>Call of duty</strong>
+                       <span>R$ 120,00</span>
+                    </div>
+                    <a class="button-buy-product" href="">
+                        <button>Comprar</button>
+                    </a>
+                </div>
+                <div class="card">
+               
+                   <div class="box-info-product">
+                       <strong>GTA 5</strong>
+                        <span>R$ 180,00</span>
+                    </div>
+                    <a class="button-buy-product" href="">
+                        <button>Comprar</button>
+                   </a>
+               </div>
+            </article>
+      </section>
+
+        
+    </Carousel.Item>
+    
+</Carousel>
+</>
+        
+
+        
     )
 }
 

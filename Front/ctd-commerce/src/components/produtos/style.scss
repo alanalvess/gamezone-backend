@@ -5,7 +5,10 @@ main {
   }
   
   .section-product {
+    padding: 100px;
+    height: 100vh;
     margin-bottom: 40px;
+    
   }
   
   .section-product h2 {
@@ -14,13 +17,17 @@ main {
   
   .container-product {
     display: grid;
-    gap: 0.625rem;
+    grid-template-columns: 300px 300px 300px;
+    gap: 0.700rem;
+
   }
+
+  
   
   .card {
     display: flex;
     flex-direction: column;
-  
+    
     background-color: #eeeeee;
   }
   
