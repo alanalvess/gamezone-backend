@@ -1,6 +1,9 @@
 package com.checkpointintegrador.CTD.Commerce.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -11,18 +14,24 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @NotNull
     @Size(min = 2, max = 50)
     private String title;
 
+    @NotNull
     private Double price;
 
+    @NotNull
     @Size(min = 10, max = 255)
     private String description;
 
+    @NotNull
     @Size(min = 10, max = 255)
     private String image;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "category_id")
+    @JsonIgnoreProperties("product")
     private Category category;
 
 

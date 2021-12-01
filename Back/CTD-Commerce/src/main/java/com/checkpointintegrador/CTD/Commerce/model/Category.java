@@ -1,7 +1,11 @@
 package com.checkpointintegrador.CTD.Commerce.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -12,11 +16,13 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @NotNull
     @Size(min = 2, max = 50)
     private String name;
 
-    @OneToMany
-    private List<Product> products;
+    @OneToMany(mappedBy = "category")
+    @JsonIgnoreProperties("category")
+    private List<Product> products = new ArrayList<>();
 
 
     public Integer getId() {
@@ -42,5 +48,4 @@ public class Category {
     public void setProducts(List<Product> products) {
         this.products = products;
     }
-
 }
