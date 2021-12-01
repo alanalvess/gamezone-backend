@@ -20,8 +20,10 @@ public class ProductController {
     CategoryRepository categoryRepository;
 
     @Autowired
-    public ProductController(ProductRepository productRepository){
+    public ProductController(ProductRepository productRepository, CategoryRepository categoryRepository){
+
         this.productRepository = productRepository;
+        this.categoryRepository =  categoryRepository;
     }
 
     @PostMapping()
@@ -48,4 +50,22 @@ public class ProductController {
     private ResponseEntity<List<Product>> listProductsByCategory(@PathVariable String name) {
         return ResponseEntity.ok(categoryRepository.findByCategoryName(name));
     }
+
+    @DeleteMapping("/{id}")
+    private ResponseEntity<String> deleteProductById(@PathVariable Integer id){
+        productRepository.deleteById(id);
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Produto excluído com êxito!");
+    }
+
+    @DeleteMapping("/category/{id}")
+    private ResponseEntity<String> deleteCategoryById(@PathVariable Integer id){
+        categoryRepository.deleteById(id);
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Categoria excluída com êxito!");
+    }
+
+//    @PostMapping("/category")
+//    private ResponseEntity<Category> registerCategory(@RequestBody Category category) {
+//        return ResponseEntity.status(HttpStatus.CREATED).body(categoryRepository.save(category));
+//    }
+
 }
