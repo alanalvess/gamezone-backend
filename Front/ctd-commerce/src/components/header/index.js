@@ -2,6 +2,7 @@ import React from 'react'
 import './style.scss'
 import cart from '../../img/cart.svg'
 import user from "../../img/user.svg"
+import logo from '../../img/gameszone.svg'
 
 const Header = () => {
     return (
@@ -9,7 +10,7 @@ const Header = () => {
             <header id="main-header">
         <nav class="container content-header">
         <a id="box-logo" href="./index.html">
-        <img id="logo" src="./../img/gamezone.svg" alt=""/>
+        <img id="logo" src={logo} alt=""/>
         </a>
         <div id="container-menu-login">
           <div id="box-menu">

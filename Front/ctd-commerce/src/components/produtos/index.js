@@ -1,6 +1,14 @@
 import React from 'react'
 import './style.scss';
 import { Carousel } from 'react-bootstrap';
+import godOfWar from '../../img/games/god-of-war.png'
+import CallOfDuty from '../../img/games/call-of-duty.png'
+import Gta from '../../img/games/gta-5.png'
+import injustice from "../../img/games/injustice.png"
+import play4 from "../../img/consoles/ps4.png" 
+import play5 from "../../img/consoles/ps5.png"
+import xbox from "../../img/consoles/xbox-series-x.png"
+import xboxpro from "../../img/consoles/xbox-pro.png"
 
 const Produtos = () => {
     return (
@@ -14,6 +22,7 @@ const Produtos = () => {
                        <div class="card">
                         
                             <div class="box-info-product">
+                            <img src={godOfWar} alt=""/>
                                  <strong>God of War</strong>
                                  <span>R$ 120,00</span>
                              </div>
@@ -24,6 +33,7 @@ const Produtos = () => {
                         <div class="card">
                         
                             <div class="box-info-product">
+                            <img src={CallOfDuty} alt=""/>
                                 <strong>Call of duty</strong>
                                 <span>R$ 120,00</span>
                              </div>
@@ -34,6 +44,7 @@ const Produtos = () => {
                          <div class="card">
                         
                             <div class="box-info-product">
+                            <img src= {Gta} alt=""/>
                                 <strong>GTA 5</strong>
                                  <span>R$ 180,00</span>
                              </div>
@@ -51,7 +62,8 @@ const Produtos = () => {
                       <div class="card">
                        
                            <div class="box-info-product">
-                                <strong>God of War</strong>
+                           <img src={godOfWar} alt=""/>
+                                <strong>God of War2</strong>
                                 <span>R$ 120,00</span>
                             </div>
                             <a class="button-buy-product" href="">
@@ -61,7 +73,8 @@ const Produtos = () => {
                        <div class="card">
                        
                            <div class="box-info-product">
-                               <strong>Injustice</strong>
+                           <img src={injustice} alt=""/>
+                               <strong>Injustice2</strong>
                                <span>R$ 120,00</span>
                             </div>
                             <a class="button-buy-product" href="">
@@ -71,7 +84,8 @@ const Produtos = () => {
                         <div class="card">
                        
                            <div class="box-info-product">
-                               <strong>GTA 5</strong>
+                           <img src= {Gta} alt=""/>
+                               <strong>GTA 2</strong>
                                 <span>R$ 180,00</span>
                             </div>
                             <a class="button-buy-product" href="">
@@ -90,7 +104,8 @@ const Produtos = () => {
                       <div class="card">
                        
                            <div class="box-info-product">
-                                <strong>God of War</strong>
+                           <img src={godOfWar} alt=""/>
+                                <strong>God of War3</strong>
                                 <span>R$ 120,00</span>
                             </div>
                             <a class="button-buy-product" href="">
@@ -100,7 +115,8 @@ const Produtos = () => {
                        <div class="card">
                        
                            <div class="box-info-product">
-                               <strong>Call of duty</strong>
+                           <img src={CallOfDuty} alt=""/>
+                               <strong>Call of duty3</strong>
                                <span>R$ 120,00</span>
                             </div>
                             <a class="button-buy-product" href="">
@@ -110,7 +126,8 @@ const Produtos = () => {
                         <div class="card">
                        
                            <div class="box-info-product">
-                               <strong>GTA 5</strong>
+                           <img src= {Gta} alt=""/>
+                               <strong>GTA 3</strong>
                                 <span>R$ 180,00</span>
                             </div>
                             <a class="button-buy-product" href="">
@@ -136,7 +153,8 @@ const Produtos = () => {
                <div class="card">
                 
                     <div class="box-info-product">
-                         <strong>God of War</strong>
+                    <img src={godOfWar} alt=""/>
+                         <strong>God of War4</strong>
                          <span>R$ 120,00</span>
                      </div>
                      <a class="button-buy-product" href="">
@@ -146,7 +164,8 @@ const Produtos = () => {
                 <div class="card">
                 
                     <div class="box-info-product">
-                        <strong>Call of duty</strong>
+                    <img src={CallOfDuty} alt=""/>
+                        <strong>Call of duty4</strong>
                         <span>R$ 120,00</span>
                      </div>
                      <a class="button-buy-product" href="">
@@ -156,7 +175,8 @@ const Produtos = () => {
                  <div class="card">
                 
                     <div class="box-info-product">
-                        <strong>GTA 5</strong>
+                    <img src= {Gta} alt=""/>
+                        <strong>GTA 4</strong>
                          <span>R$ 180,00</span>
                      </div>
                      <a class="button-buy-product" href="">
@@ -173,7 +193,8 @@ const Produtos = () => {
               <div class="card">
                
                    <div class="box-info-product">
-                        <strong>God of War</strong>
+                   <img src={godOfWar} alt=""/>
+                        <strong>God of War5</strong>
                         <span>R$ 120,00</span>
                     </div>
                     <a class="button-buy-product" href="">
@@ -183,7 +204,8 @@ const Produtos = () => {
                <div class="card">
                
                    <div class="box-info-product">
-                       <strong>Injustice</strong>
+                   <img src={injustice} alt=""/>
+                       <strong>Injustice5</strong>
                        <span>R$ 120,00</span>
                     </div>
                     <a class="button-buy-product" href="">
@@ -193,6 +215,7 @@ const Produtos = () => {
                 <div class="card">
                
                    <div class="box-info-product">
+                   <img src= {Gta} alt=""/>
                        <strong>GTA 5</strong>
                         <span>R$ 180,00</span>
                     </div>
@@ -212,7 +235,8 @@ const Produtos = () => {
               <div class="card">
                
                    <div class="box-info-product">
-                        <strong>God of War</strong>
+                   <img src={godOfWar} alt=""/>
+                        <strong>God of War6</strong>
                         <span>R$ 120,00</span>
                     </div>
                     <a class="button-buy-product" href="">
@@ -222,7 +246,8 @@ const Produtos = () => {
                <div class="card">
                
                    <div class="box-info-product">
-                       <strong>Call of duty</strong>
+                   <img src={CallOfDuty} alt=""/>
+                       <strong>Call of duty6</strong>
                        <span>R$ 120,00</span>
                     </div>
                     <a class="button-buy-product" href="">
@@ -232,7 +257,8 @@ const Produtos = () => {
                 <div class="card">
                
                    <div class="box-info-product">
-                       <strong>GTA 5</strong>
+                   <img src= {Gta} alt=""/>
+                       <strong>GTA 6</strong>
                         <span>R$ 180,00</span>
                     </div>
                     <a class="button-buy-product" href="">

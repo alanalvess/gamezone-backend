@@ -2,12 +2,16 @@
 main {
     padding: 0 0.625rem;
     margin-top: 1.25rem;
+  
   }
   
   .section-product {
     padding: 100px;
-    height: 100vh;
+    // height: 100vh;
     margin-bottom: 40px;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
     
   }
   
