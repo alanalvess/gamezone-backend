@@ -14,7 +14,7 @@ function App() {
      <Header/>
      <Poster/>
      <Produtos/>
-     
+     <Footer/>
    </div>
   );
 }
