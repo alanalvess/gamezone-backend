@@ -17,6 +17,7 @@ const Header = () => {
             <a class="item-menu" href="">Home</a>
             <a class="item-menu" href="">Jogos</a>
             <a class="item-menu" href="">Consoles</a>
+            <a class="item-menu" href="#contact">Sobre</a>
           </div>
   
           <div id="box-login-cart">
