@@ -1,11 +1,11 @@
 import React from 'react'
 import './style.scss'
 import {Carousel} from 'react-bootstrap'
-import img1 from '../../img/posters/poster-1.jpg'
-import img2 from '../../img/posters/poster-2.jpg'
-import img3 from '../../img/posters/poster-3.jpg'
-import img4 from '../../img/posters/poster-4.jpg'
-import img5 from '../../img/posters/poster-5.jpg'
+import img1 from '../../../../img/posters/poster-1.jpg'
+import img2 from '../../../../img/posters/poster-2.jpg'
+import img3 from '../../../../img/posters/poster-3.jpg'
+import img4 from '../../../../img/posters/poster-4.jpg'
+import img5 from '../../../../img/posters/poster-5.jpg'
 
 const Poster = () => {
     return (
@@ -69,26 +69,4 @@ const Poster = () => {
     )
 }
 
-
-
 export default Poster
-
-
-
-// let number = 0;
-
-// setInterval(() => {
-//   number ++;
-//   if(number === 6) {
-//     number = 1;
-//   }
-
-//   const poster = document.getElementById("poster");
-//   poster.style.backgroundImage = url("./img/posters/poster-${number}.jpg");
-
-// }, 5000);
-
-
-//   document.getElementById("menu-toggle").addEventListener("click", () => {
-//   document.querySelector("nav").classList.toggle("active");
-// });
