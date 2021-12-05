@@ -22,8 +22,6 @@ const Header = () => {
             </div>
 
             <div id="box-login-cart">
-
-
               <a href=""><img src={cart} alt="carrinho de compras" /></a>
               <a href=""><img src={user} alt="login do usuario" /></a>
             </div>
