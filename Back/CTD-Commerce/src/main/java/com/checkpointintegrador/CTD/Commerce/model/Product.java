@@ -22,7 +22,7 @@ public class Product {
     private Double price;
 
     @NotNull
-//    @Size(min = 10, max = 255)
+    @Size(min = 10, max = 255)
     private String description;
 
     @NotNull
@@ -31,7 +31,6 @@ public class Product {
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "category_id")
-    @JsonIgnoreProperties("product")
     private Category category;
 
 
