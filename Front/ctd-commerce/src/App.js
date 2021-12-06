@@ -1,22 +1,10 @@
+import RouteList from './routes';
 
-import './App.scss';
-
-import Header from './components/header';
-import Poster from './components/poster';
-import Produtos from './components/produtos';
- import Footer from './components/footer'; 
- import 'bootstrap/dist/css/bootstrap.min.css';
- 
- 
-function App() {
+const App = () => {
   return (
-   <div>
-     <Header/>
-     <Poster/>
-     <Produtos/>
-     <Footer/>
-   </div>
+    <>
+      <RouteList />
+    </>
   );
 }
-
 export default App;
