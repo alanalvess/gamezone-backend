@@ -4,8 +4,10 @@ import Jogos from '../pages/Jogos';
 
 import NotFound from '../pages/NotFound';
 
-import Header from '../pages/Home/components/Header';
-import Footer from '../pages/Home/components/Footer'
+import Header from '../components/Header';
+import Footer from '../components/Footer'
+import Consoles from '../pages/Consoles';
+import Sobre from '../pages/Sobre'
 
 const RouteList = () => (
   <BrowserRouter>
@@ -16,6 +18,8 @@ const RouteList = () => (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/jogos" element={<Jogos />} />
+      <Route path="/consoles" element={<Consoles />} />
+      <Route path="/sobre" element={<Sobre />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
 

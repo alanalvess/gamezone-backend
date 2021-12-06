@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet';
 
-import Jogo from '../../components/Jogos';
+import Footer from '../../components/Footer'
 
 const Jogos = () => {
 
@@ -9,7 +9,7 @@ const Jogos = () => {
       <Helmet>
         <title>GameZone | Jogos</title>
       </Helmet>
-      <Jogo/>
+      <Footer/>
     </>
   )
 }

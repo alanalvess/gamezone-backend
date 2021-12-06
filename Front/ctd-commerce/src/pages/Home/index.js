@@ -1,8 +1,9 @@
 /* eslint-disable no-unused-vars */
 import { Helmet } from 'react-helmet';
 
-import Poster from './components/Poster';
-import Produtos from './components/Produtos';
+import Poster from './Poster';
+import Jogos from '../../components/Jogos';
+import Consoles from '../../components/Consoles';
 
 const Home = () => {
   return (
@@ -11,7 +12,8 @@ const Home = () => {
         <title>GameZone | Home</title>
       </Helmet>
       <Poster/>
-      <Produtos/>
+      <Jogos/>
+      <Consoles/>
     </>
   );
 }

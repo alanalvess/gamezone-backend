@@ -1,11 +1,11 @@
 import React from 'react'
 import './style.scss'
 import {Carousel} from 'react-bootstrap'
-import img1 from '../../../../img/posters/poster-1.jpg'
-import img2 from '../../../../img/posters/poster-2.jpg'
-import img3 from '../../../../img/posters/poster-3.jpg'
-import img4 from '../../../../img/posters/poster-4.jpg'
-import img5 from '../../../../img/posters/poster-5.jpg'
+import img1 from '../../../img/posters/poster-1.jpg'
+import img2 from '../../../img/posters/poster-2.jpg'
+import img3 from '../../../img/posters/poster-3.jpg'
+import img4 from '../../../img/posters/poster-4.jpg'
+import img5 from '../../../img/posters/poster-5.jpg'
 
 const Poster = () => {
     return (
