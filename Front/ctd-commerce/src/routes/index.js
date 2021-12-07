@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import Jogos from '../pages/Jogos';
+import JogoDetalhe from '../pages/JogoDetalhe';
 
 import NotFound from '../pages/NotFound';
 
@@ -18,6 +19,7 @@ const RouteList = () => (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/jogos" element={<Jogos />} />
+      <Route path="/jogo-detalhe" element={<JogoDetalhe />} />
       <Route path="/consoles" element={<Consoles />} />
       <Route path="/sobre" element={<Sobre />} />
       <Route path="*" element={<NotFound />} />
