@@ -28,7 +28,33 @@ public class ProductController {
 
     @PostMapping()
     private ResponseEntity<Product> registerProduct(@RequestBody Product product) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(productRepository.save(product));
+            ResponseEntity<Product> response;
+            if (categoryRepository.findByCategoryName(product.getCategory().getName()).isPresent()){
+
+                response = ResponseEntity.status(HttpStatus.CREATED).body(productRepository.save(product));
+
+            }
+
+            else
+                response = ResponseEntity.status(HttpStatus.CREATED).body(productRepository.save(product));
+
+            return response;
+
+//        BindingResult result, ModelMap model, Category category) {
+//            if (result.hasErrors()) {
+//                return "forms/productForm";
+//            }
+////            try {
+//                category.addProduct(product);
+//                product.setCategory(category);
+////                // Add product to db
+//                productService.addProduct(product);
+////            } catch (Exception e) {
+//                log.error("/add/---" + e);
+//                return "redirect:/product/deniedAction/?code=0";
+//            }
+////            return "redirect:/admin/product/";
+
     }
 
     @GetMapping
@@ -47,7 +73,7 @@ public class ProductController {
     }
 
     @GetMapping("/category/{name}")
-    private ResponseEntity<List<Product>> listProductsByCategory(@PathVariable String name) {
+    private ResponseEntity<Optional<Product>> listProductsByCategory(@PathVariable String name) {
         return ResponseEntity.ok(categoryRepository.findByCategoryName(name));
     }
 
