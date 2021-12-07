@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Locale;
 import java.util.Optional;
 
 @RestController
@@ -28,33 +29,14 @@ public class ProductController {
 
     @PostMapping()
     private ResponseEntity<Product> registerProduct(@RequestBody Product product) {
-            ResponseEntity<Product> response;
-            if (categoryRepository.findByCategoryName(product.getCategory().getName()).isPresent()){
-
-                response = ResponseEntity.status(HttpStatus.CREATED).body(productRepository.save(product));
-
+            if (categoryRepository.findByName(product.getCategory().getName()).isPresent()){
+                Category c = categoryRepository.getByName(product.getCategory().getName());
+                product.setCategory(c);
+                product.setTitle(product.getTitle().toLowerCase());
+                return ResponseEntity.status(HttpStatus.CREATED).body(productRepository.save(product));
             }
-
             else
-                response = ResponseEntity.status(HttpStatus.CREATED).body(productRepository.save(product));
-
-            return response;
-
-//        BindingResult result, ModelMap model, Category category) {
-//            if (result.hasErrors()) {
-//                return "forms/productForm";
-//            }
-////            try {
-//                category.addProduct(product);
-//                product.setCategory(category);
-////                // Add product to db
-//                productService.addProduct(product);
-////            } catch (Exception e) {
-//                log.error("/add/---" + e);
-//                return "redirect:/product/deniedAction/?code=0";
-//            }
-////            return "redirect:/admin/product/";
-
+                return ResponseEntity.status(HttpStatus.CREATED).body(productRepository.save(product));
     }
 
     @GetMapping
@@ -74,7 +56,8 @@ public class ProductController {
 
     @GetMapping("/category/{name}")
     private ResponseEntity<Optional<Product>> listProductsByCategory(@PathVariable String name) {
-        return ResponseEntity.ok(categoryRepository.findByCategoryName(name));
+        Category c = categoryRepository.getByName(name);
+        return ResponseEntity.ok(productRepository.findByCategoryId(c.getId()));
     }
 
     @DeleteMapping("/{id}")
