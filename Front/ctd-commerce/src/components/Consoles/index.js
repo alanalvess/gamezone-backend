@@ -14,24 +14,24 @@ const Consoles = () => {
             <Carousel fade variant="dark">
 
                 <Carousel.Item>
-                    <section class="container section-product">
-                        <article class="container-product">
-                            <div class="card">
+                    <section className="container section-product">
+                        <article className="container-product">
+                            <div className="card">
                                 <img src={PS5} alt="" />
-                                <div class="box-info-product">
+                                <div className="box-info-product">
                                     <strong>PS5</strong>
                                     <span>R$ 5000,00</span>
-                                    <a class="button-buy-product" href="">
+                                    <a className="button-buy-product" href="">
                                         <button>Comprar</button>
                                     </a>
                                 </div>
                             </div>
-                            <div class="card">
+                            <div className="card">
                                 <img src={PS4} alt="" />
-                                <div class="box-info-product">
+                                <div className="box-info-product">
                                     <strong>PS4</strong>
                                     <span>R$ 3000,00</span>
-                                    <a class="button-buy-product" href="">
+                                    <a className="button-buy-product" href="">
                                         <button>Comprar</button>
                                     </a>
                                 </div>
@@ -41,24 +41,24 @@ const Consoles = () => {
                 </Carousel.Item>
 
                 <Carousel.Item>
-                    <section class="container section-product">
-                        <article class="container-product">
-                            <div class="card">
+                    <section className="container section-product">
+                        <article className="container-product">
+                            <div className="card">
                                 <img src={XboxX} alt="" />
-                                <div class="box-info-product">
+                                <div className="box-info-product">
                                     <strong>Xbox Series X</strong>
                                     <span>R$ 5000,00</span>
-                                    <a class="button-buy-product" href="">
+                                    <a className="button-buy-product" href="">
                                         <button>Comprar</button>
                                     </a>
                                 </div>
                             </div>
-                            <div class="card">
+                            <div className="card">
                                 <img src={XboxS} alt="" />
-                                <div class="box-info-product">
+                                <div className="box-info-product">
                                     <strong>Xbox Series S</strong>
                                     <span>R$ 3000,00</span>
-                                    <a class="button-buy-product" href="">
+                                    <a className="button-buy-product" href="">
                                         <button>Comprar</button>
                                     </a>
                                 </div>

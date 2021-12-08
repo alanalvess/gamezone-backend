@@ -21,38 +21,38 @@ const Playstation = () => {
       <h2>Jogos | Playstation</h2>
       <Carousel fade variant="dark">
         <Carousel.Item>
-          <section class="container section-product">
-            <article class="container-product">
-              <div class="card">
+          <section className="container section-product">
+            <article className="container-product">
+              <div className="card">
                 <img src={SpaidermanPs5} alt="" />
-                <div class="box-info-product">
+                <div className="box-info-product">
                   <strong>Call of duty</strong>
                   <span>R$ 120,00</span>
-                  <a class="button-buy-product" href="">
+                  <a className="button-buy-product" href="">
                     <button onClick={handleNavigateToGameDetail}>
                       Comprar
                     </button>
                   </a>
                 </div>
               </div>
-              <div class="card">
+              <div className="card">
                 <img src={Fortinite} alt="" />
-                <div class="box-info-product">
+                <div className="box-info-product">
                   <strong>GTA 5</strong>
                   <span>R$ 180,00</span>
-                  <a class="button-buy-product" href="">
+                  <a className="button-buy-product" href="">
                     <button onClick={handleNavigateToGameDetail}>
                       Comprar
                     </button>
                   </a>
                 </div>
               </div>
-              <div class="card">
+              <div className="card">
                 <img src={AssassinsCreed} alt="" />
-                <div class="box-info-product">
+                <div className="box-info-product">
                   <strong>Injustice</strong>
                   <span>R$ 100,00</span>
-                  <a class="button-buy-product" href="">
+                  <a className="button-buy-product" href="">
                     <button onClick={handleNavigateToGameDetail}>
                       Comprar
                     </button>
@@ -63,38 +63,38 @@ const Playstation = () => {
           </section>
         </Carousel.Item>
         <Carousel.Item>
-          <section class="container section-product">
-            <article class="container-product">
-              <div class="card">
+          <section className="container section-product">
+            <article className="container-product">
+              <div className="card">
                 <img src={SpidermanPs4} alt="" />
-                <div class="box-info-product">
+                <div className="box-info-product">
                   <strong>God of War2</strong>
                   <span>R$ 120,00</span>
-                  <a class="button-buy-product" href="">
+                  <a className="button-buy-product" href="">
                     <button onClick={handleNavigateToGameDetail}>
                       Comprar
                     </button>
                   </a>
                 </div>
               </div>
-              <div class="card">
+              <div className="card">
                 <img src={Sekiro} alt="" />
-                <div class="box-info-product">
+                <div className="box-info-product">
                   <strong>Injustice2</strong>
                   <span>R$ 120,00</span>
-                  <a class="button-buy-product" href="">
+                  <a className="button-buy-product" href="">
                     <button onClick={handleNavigateToGameDetail}>
                       Comprar
                     </button>
                   </a>
                 </div>
               </div>
-              <div class="card">
+              <div className="card">
                 <img src={Injustice} alt="" />
-                <div class="box-info-product">
+                <div className="box-info-product">
                   <strong>GTA 2</strong>
                   <span>R$ 180,00</span>
-                  <a class="button-buy-product" href="">
+                  <a className="button-buy-product" href="">
                     <button onClick={handleNavigateToGameDetail}>
                       Comprar
                     </button>
@@ -105,38 +105,38 @@ const Playstation = () => {
           </section>
         </Carousel.Item>
         <Carousel.Item>
-          <section class="container section-product">
-            <article class="container-product">
-              <div class="card">
+          <section className="container section-product">
+            <article className="container-product">
+              <div className="card">
                 <img src={Gta} alt="" />
-                <div class="box-info-product">
+                <div className="box-info-product">
                   <strong>God of War3</strong>
                   <span>R$ 120,00</span>
-                  <a class="button-buy-product" href="">
+                  <a className="button-buy-product" href="">
                     <button onClick={handleNavigateToGameDetail}>
                       Comprar
                     </button>
                   </a>
                 </div>
               </div>
-              <div class="card">
+              <div className="card">
                 <img src={GodOfWar} alt="" />
-                <div class="box-info-product">
+                <div className="box-info-product">
                   <strong>Call of duty3</strong>
                   <span>R$ 120,00</span>
-                  <a class="button-buy-product" href="">
+                  <a className="button-buy-product" href="">
                     <button onClick={handleNavigateToGameDetail}>
                       Comprar
                     </button>
                   </a>
                 </div>
               </div>
-              <div class="card">
+              <div className="card">
                 <img src={CallOfDuty} alt="" />
-                <div class="box-info-product">
+                <div className="box-info-product">
                   <strong>GTA 3</strong>
                   <span>R$ 180,00</span>
-                  <a class="button-buy-product" href="">
+                  <a className="button-buy-product" href="">
                     <button onClick={handleNavigateToGameDetail}>
                       Comprar
                     </button>

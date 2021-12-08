@@ -12,24 +12,24 @@ const Header = () => {
 
       <div>
         <header id="main-header">
-          <nav class="container content-header">
+          <nav className="container content-header">
             <a id="box-logo" href="./index.html">
               <img id="logo" src={logo} alt="" />
             </a>
             <div id="container-menu-login">
               <div id="box-menu">
-                <a class="item-menu" href="/">Home</a>
-                <div class="dropdown">
-                  <a class="dropbtn item-menu" href="/jogos">Jogos</a>
-                  <div class="dropdown-content">
+                <a className="item-menu" href="/">Home</a>
+                <div className="dropdown">
+                  <a className="dropbtn item-menu" href="/jogos">Jogos</a>
+                  <div className="dropdown-content">
                     <a href="/ps-5">PS5</a>
                     <a href="/ps-4">PS4</a>
                     <a href="xbox-series-x">Xbox Series X</a>
                     <a href="xbox-one">Xbox One</a>
                   </div>
                 </div>
-                <a class="item-menu" href="/consoles">Consoles</a>
-                <a class="item-menu" href="/sobre">Sobre</a>
+                <a className="item-menu" href="/consoles">Consoles</a>
+                <a className="item-menu" href="/sobre">Sobre</a>
               </div>
 
               <div id="box-login-cart">
