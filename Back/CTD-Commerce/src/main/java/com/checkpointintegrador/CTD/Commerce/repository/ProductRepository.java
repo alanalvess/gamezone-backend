@@ -10,5 +10,6 @@ import java.util.Optional;
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Integer> {
 
-//    Optional<Product> findByProductName(String name);
+//  @Query("SELECT p FROM Product p WHERE p.category.name = ?1")
+    Optional<Product> findByCategoryId(Integer id);
 }

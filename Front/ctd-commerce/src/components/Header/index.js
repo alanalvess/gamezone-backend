@@ -11,7 +11,7 @@ const Header = () => {
     <>
       <div>
         <header id="main-header">
-          <nav class="container content-header">
+          <nav className="container content-header">
             <a id="box-logo" href="./index.html">
               <img id="logo" src={logo} alt="" />
             </a>

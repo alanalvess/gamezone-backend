@@ -17,6 +17,7 @@ public class Product {
 
     @NotNull
     @Size(min = 2, max = 50)
+    @Column(unique = true)
     private String title;
 
     @NotNull
@@ -30,7 +31,7 @@ public class Product {
     @Size(min = 10, max = 255)
     private String image;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "category_id")
     private Category category;
 
