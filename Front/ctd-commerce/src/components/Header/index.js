@@ -1,15 +1,14 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react'
-import './style.scss'
-import cart from '../../img/cart.svg'
-import user from '../../img/user.svg'
-import logo from '../../img/gameszone.svg'
+import React from "react";
+import "./style.scss";
+import cart from "../../img/cart.svg";
+import user from "../../img/user.svg";
+import logo from "../../img/gameszone.svg";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <>
-
-
       <div>
         <header id="main-header">
           <nav class="container content-header">
@@ -18,9 +17,13 @@ const Header = () => {
             </a>
             <div id="container-menu-login">
               <div id="box-menu">
-                <a class="item-menu" href="/">Home</a>
+                <Link class="item-menu" to="/">
+                  Home
+                </Link>
                 <div class="dropdown">
-                  <a class="dropbtn item-menu" href="/jogos">Jogos</a>
+                  <a class="dropbtn item-menu" href="/jogos">
+                    Jogos
+                  </a>
                   <div class="dropdown-content">
                     <a href="/ps-5">PS5</a>
                     <a href="/ps-4">PS4</a>
@@ -28,13 +31,21 @@ const Header = () => {
                     <a href="xbox-one">Xbox One</a>
                   </div>
                 </div>
-                <a class="item-menu" href="/consoles">Consoles</a>
-                <a class="item-menu" href="/sobre">Sobre</a>
+                <a class="item-menu" href="/consoles">
+                  Consoles
+                </a>
+                <a class="item-menu" href="/sobre">
+                  Sobre
+                </a>
               </div>
 
               <div id="box-login-cart">
-                <a href="/carrinho"><img src={cart} alt="carrinho de compras" /></a>
-                <a href="/conta"><img src={user} alt="login do usuario" /></a>
+                <Link to="/carrinho">
+                  <img src={cart} alt="carrinho de compras" />
+                </Link>
+                <a href="/conta">
+                  <img src={user} alt="login do usuario" />
+                </a>
               </div>
             </div>
 
@@ -43,7 +54,7 @@ const Header = () => {
         </header>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

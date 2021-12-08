@@ -1,18 +1,44 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react'
-import './style.scss';
-import Playstation from './playstation';
-import Xbox from './xbox';
-import Switch from './switch';
+import React, { useEffect, useState } from "react";
+import "./style.scss";
+import Playstation from "./playstation";
+import Xbox from "./xbox";
+import Switch from "./switch";
+import axios from "axios";
 
 const Jogos = () => {
-    return (
-        <>
-            <Playstation />
-            <Xbox />
-            <Switch />
-        </>
-    )
-}
+  const [psGames, setPsGames] = useState([]);
+  const [xboxGames, setXboxGames] = useState([]);
+  const [switchGames, setSwitchGames] = useState([]);
 
-export default Jogos
+  useEffect(() => {
+    axios
+      .get(
+        "http://gamezone-env.eba-nm6433md.us-east-1.elasticbeanstalk.com/products"
+      )
+      .then((res) => {
+        const psGames = res.data.filter(
+          (jogo) => jogo.category.name === "Jogos de PlayStation"
+        );
+        const xboxGames = res.data.filter(
+          (jogo) => jogo.category.name === "Jogos de Xbox"
+        );
+        const switchGames = res.data.filter(
+          (jogo) => jogo.category.name === "Jogos de Switch"
+        );
+        setPsGames(psGames);
+        setXboxGames(xboxGames);
+        setSwitchGames(switchGames);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+  return (
+    <>
+      <Playstation jogos={psGames} />
+      <Xbox jogos={xboxGames} />
+      <Switch jogos={switchGames} />
+    </>
+  );
+};
+
+export default Jogos;

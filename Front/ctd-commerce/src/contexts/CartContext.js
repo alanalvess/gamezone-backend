@@ -1,14 +1,16 @@
-import React, { createContext, useContext } from "react";
+import React, { createContext, useContext, useState } from "react";
 
 const CartContext = createContext({});
 
 export const CartProvider = ({ children }) => {
-  function logout() {
-    console.log("funcao do cart context");
+  const [products, setProducts] = useState([]);
+  function insertInToCart(product) {
+    setProducts([...products, product[0]]);
+    console.log('CONTEXT',product[0])
   }
 
   return (
-    <CartContext.Provider value={{ logout, cart: "Carrinho" }}>
+    <CartContext.Provider value={{ insertInToCart, cart: "Carrinho", products }}>
       {children}
     </CartContext.Provider>
   );
