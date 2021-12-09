@@ -2,13 +2,21 @@ import "./style.scss";
 import { useCart } from "../../contexts/CartContext";
 
 const Carrinho = () => {
-  const cartContext = useCart();
+  // const cartContext = useCart();
+  let cartContext = [];
+
+  const dataLocalStorage = localStorage.getItem("@CART");
+  if(dataLocalStorage){
+    const data = JSON.parse(dataLocalStorage);
+    cartContext = [...data]
+  }
   console.log(cartContext);
+  console.log("gashasj", dataLocalStorage)
 
   return (
     <div>
-      {cartContext.products.length > 0 ? (
-        cartContext.products.map((item) => (
+      {cartContext[0].length > 0 ? (
+        cartContext[0].map((item) => (
           <div key={item.id} className="game-card">
             {item.title}
             {item.description}
