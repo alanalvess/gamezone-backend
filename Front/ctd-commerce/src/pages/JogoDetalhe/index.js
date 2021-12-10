@@ -31,7 +31,7 @@ const JogoDetalhe = () => {
   return (
     <div className="jogo-detalhe-wrapper">
       <h1>{jogo[0]?.title}</h1>
-      <h3>Jogos</h3>
+      {/* <h3>Jogos</h3> */}
       <h6>Avaliaçāo: 8</h6>
       <div className="card-wrapper">
         <div className="card">

@@ -1,8 +1,6 @@
 import "./style.scss";
-import { useCart } from "../../contexts/CartContext";
 
 const Carrinho = () => {
-  // const cartContext = useCart();
   let cartContext = [];
 
   const dataLocalStorage = localStorage.getItem("@CART");
