@@ -56,9 +56,8 @@ public class ProductController {
     }
 
     @GetMapping("/category/{name}")
-    private ResponseEntity<Optional<Product>> listProductsByCategory(@PathVariable String name) {
-        Category c = categoryRepository.getByName(name);
-        return ResponseEntity.ok(productRepository.findByCategoryId(c.getId()));
+    private ResponseEntity<List<Product>> listProductsByCategory(@PathVariable String name) {
+        return ResponseEntity.ok(productRepository.findByCategoryName(name));
     }
 
     @DeleteMapping("/{id}")
@@ -72,10 +71,5 @@ public class ProductController {
         categoryRepository.deleteById(id);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Categoria excluída com êxito!");
     }
-
-//    @PostMapping("/category")
-//    private ResponseEntity<Category> registerCategory(@RequestBody Category category) {
-//        return ResponseEntity.status(HttpStatus.CREATED).body(categoryRepository.save(category));
-//    }
 
 }
