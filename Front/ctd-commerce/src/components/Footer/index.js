@@ -92,8 +92,8 @@ const Team = () => {
                     <a href={developer.githubLink}>
                       <svg
                         enable-background="new -1163 1657.697 56.693 56.693"
-                        height="25"
-                        width="25"
+                        height="23"
+                        width="23"
                         fill="#ffffff"
                         id="Layer_1"
                         version="1.1"

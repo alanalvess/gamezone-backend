@@ -1,35 +1,39 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import { Carousel } from "react-bootstrap";
+import { Carousel, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const Playstation = ({ jogos }) => {
+const Xbox = ({ jogos }) => {
+
   function handleNavigateToGameDetail(e, jogo) {
     e.preventDefault();
     localStorage.setItem("jogo", JSON.stringify(jogo));
     window.location.href = "/jogo-detalhe";
   }
+  
   return (
     <>
-      <h2>Jogos | Playstation</h2>
+      <h2>Jogos | Xbox</h2>
       <Carousel fade variant="dark">
         <Carousel.Item>
           <section class="container section-product">
             <article class="container-product">
-              {jogos.slice(0, 3).map((jogo) => (
-                <div key={jogo.id} class="card">
+            {jogos.slice(0, 3).map((jogo) => (
+                <div key={jogo.id} className="card">
                   <img src={jogo.image} alt="" />
-                  <div class="box-info-product">
+                  <div className="box-info-product">
                     <strong>{jogo.title}</strong>
                     <span>R$ {jogo.price}</span>
-                    <a class="button-buy-product" href="">
+                    <div className="button-buy-product">
                       <Link
                         to="/jogo-detalhe"
                         onClick={(e) => handleNavigateToGameDetail(e, jogo)}
                       >
-                        Comprar
+                        <Button>
+                          Ver produto
+                        </Button>
                       </Link>
-                    </a>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -39,17 +43,22 @@ const Playstation = ({ jogos }) => {
         <Carousel.Item>
           <section class="container section-product">
             <article class="container-product">
-              {jogos.slice(3, 6).map((jogo) => (
-                <div key={jogo.id} class="card">
+            {jogos.slice(0, 3).map((jogo) => (
+                <div key={jogo.id} className="card">
                   <img src={jogo.image} alt="" />
-                  <div class="box-info-product">
+                  <div className="box-info-product">
                     <strong>{jogo.title}</strong>
                     <span>R$ {jogo.price}</span>
-                    <a class="button-buy-product" href="">
-                      <button onClick={handleNavigateToGameDetail}>
-                        Comprar
-                      </button>
-                    </a>
+                    <div className="button-buy-product">
+                      <Link
+                        to="/jogo-detalhe"
+                        onClick={(e) => handleNavigateToGameDetail(e, jogo)}
+                      >
+                        <Button>
+                          Ver produto
+                        </Button>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -59,17 +68,22 @@ const Playstation = ({ jogos }) => {
         <Carousel.Item>
           <section class="container section-product">
             <article class="container-product">
-              {jogos.slice(6, 9).map((jogo) => (
-                <div key={jogo.id} class="card">
+            {jogos.slice(0, 3).map((jogo) => (
+                <div key={jogo.id} className="card">
                   <img src={jogo.image} alt="" />
-                  <div class="box-info-product">
+                  <div className="box-info-product">
                     <strong>{jogo.title}</strong>
                     <span>R$ {jogo.price}</span>
-                    <a class="button-buy-product" href="">
-                      <button onClick={handleNavigateToGameDetail}>
-                        Comprar
-                      </button>
-                    </a>
+                    <div className="button-buy-product">
+                      <Link
+                        to="/jogo-detalhe"
+                        onClick={(e) => handleNavigateToGameDetail(e, jogo)}
+                      >
+                        <Button>
+                          Ver produto
+                        </Button>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -81,4 +95,4 @@ const Playstation = ({ jogos }) => {
   );
 };
 
-export default Playstation;
+export default Xbox;

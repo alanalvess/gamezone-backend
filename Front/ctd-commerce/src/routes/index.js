@@ -1,21 +1,18 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Home from "../pages/Home";
 import Jogos from "../pages/Jogos";
 import JogoDetalhe from "../pages/JogoDetalhe";
-
-import NotFound from "../pages/NotFound";
-
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import Consoles from "../pages/Consoles";
 import Sobre from "../pages/Sobre";
 import Carrinho from "../pages/Carrinho";
+import NotFound from "../pages/NotFound";
 
 const RouteList = () => (
   <BrowserRouter>
-    <nav>
-      <Header />
-    </nav>
+
+    <Header />
 
     <Routes>
       <Route path="/" element={<Home />} />
@@ -27,9 +24,8 @@ const RouteList = () => (
       <Route path="*" element={<NotFound />} />
     </Routes>
 
-    <div>
-      <Footer />
-    </div>
+    <Footer />
+
   </BrowserRouter>
 );
 

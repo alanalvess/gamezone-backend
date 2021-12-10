@@ -25,10 +25,9 @@ const Header = () => {
                     Jogos
                   </a>
                   <div class="dropdown-content">
-                    <a href="/ps-5">PS5</a>
-                    <a href="/ps-4">PS4</a>
-                    <a href="xbox-series-x">Xbox Series X</a>
-                    <a href="xbox-one">Xbox One</a>
+                    <a href="/ps-5">Playstation</a>
+                    <a href="/ps-4">Xbox</a>
+                    <a href="xbox-series-x">Switch</a>
                   </div>
                 </div>
                 <a class="item-menu" href="/consoles">
