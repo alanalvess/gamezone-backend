@@ -56,13 +56,18 @@ Resposta (201 - Created)
    ```
 2. **Abra na sua IDE** e execute o projeto.
 
-3. **Importe o arquivo de testes** [`gamezone-testes.json`](./gamezone-testes.json) no  
-   [![Postman](https://img.shields.io/badge/Postman-FF6C37?logo=postman&logoColor=white)](https://www.postman.com/) ou  
-   [![Insomnia](https://img.shields.io/badge/Insomnia-4000BF?logo=insomnia&logoColor=white)](https://insomnia.rest/)
+3. **Verifique o perfil ativo do Spring Boot**  
+      No arquivo `application.properties`, confirme que o perfil está configurado como **dev** para execução local:
+   ```properties
+   spring.profiles.active=dev
+   ```
 
-4. **Execute primeiro os testes POST** para popular o banco.
+4. **Importe o arquivo de testes** [`gamezone-testes.json`](./gamezone-testes.json) no [![Postman](https://img.shields.io/badge/Postman-FF6C37?logo=postman&logoColor=white)](https://www.postman.com/) ou [![Insomnia](https://img.shields.io/badge/Insomnia-4000BF?logo=insomnia&logoColor=white)](https://insomnia.rest/)
 
-5. **Depois, teste os demais endpoints.**
+5. **Execute primeiro os testes POST** para popular o banco.
+
+6. **Depois, teste os demais endpoints.**
+> ⚠️ **Importante:** No ambiente de nuvem, configure o perfil como `prod`.
 
 ---
 
@@ -74,10 +79,10 @@ Você pode testar direto no frontend usando o repositório:
 ---
 
 ## 🛠 Tecnologias Utilizadas
-- ☕ Java 21
-- 🍃 Spring Boot 3.x
+- ☕ Java
+- 🍃 Spring Boot
 - 📦 Maven
-- 🗄 H2 Database
+- 🗄 MySQL
 - 🧪 Postman / Insomnia
 
 ---
