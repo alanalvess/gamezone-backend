@@ -27,7 +27,7 @@ public class ProductController {
         this.categoryRepository = categoryRepository;
     }
 
-    @PostMapping("/addProduct")
+    @PostMapping("/add")
     private ResponseEntity<Product> registerProduct(@RequestBody Product product) {
         if (categoryRepository.findByName(product.getCategory().getName()).isPresent()) {
             Category c = categoryRepository.getByName(product.getCategory().getName());
@@ -48,7 +48,7 @@ public class ProductController {
         return ResponseEntity.ok(productRepository.findById(id));
     }
 
-    @GetMapping("/categories")
+    @GetMapping("/categories/all")
     private ResponseEntity<List<Category>> listAllCategories() {
         return ResponseEntity.ok(categoryRepository.findAll());
     }
