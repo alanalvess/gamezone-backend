@@ -1,13 +1,13 @@
-package com.checkpointintegrador.CTD.Commerce;
+package com.gamezone;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CtdCommerceApplicationTests {
+class GamezoneApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }

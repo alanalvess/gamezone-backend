@@ -1,16 +1,15 @@
-package com.checkpointintegrador.CTD.Commerce.controller;
+package com.gamezone.controller;
 
-import com.checkpointintegrador.CTD.Commerce.model.Category;
-import com.checkpointintegrador.CTD.Commerce.model.Product;
-import com.checkpointintegrador.CTD.Commerce.repository.CategoryRepository;
-import com.checkpointintegrador.CTD.Commerce.repository.ProductRepository;
+import com.gamezone.model.Category;
+import com.gamezone.model.Product;
+import com.gamezone.repository.CategoryRepository;
+import com.gamezone.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Locale;
 import java.util.Optional;
 
 @RestController
@@ -22,25 +21,24 @@ public class ProductController {
     CategoryRepository categoryRepository;
 
     @Autowired
-    public ProductController(ProductRepository productRepository, CategoryRepository categoryRepository){
+    public ProductController(ProductRepository productRepository, CategoryRepository categoryRepository) {
 
         this.productRepository = productRepository;
-        this.categoryRepository =  categoryRepository;
+        this.categoryRepository = categoryRepository;
     }
 
-    @PostMapping()
+    @PostMapping("/addProduct")
     private ResponseEntity<Product> registerProduct(@RequestBody Product product) {
-            if (categoryRepository.findByName(product.getCategory().getName()).isPresent()){
-                Category c = categoryRepository.getByName(product.getCategory().getName());
-                product.setCategory(c);
-                product.setTitle(product.getTitle().toLowerCase());
-                return ResponseEntity.status(HttpStatus.CREATED).body(productRepository.save(product));
-            }
-            else
-                return ResponseEntity.status(HttpStatus.CREATED).body(productRepository.save(product));
+        if (categoryRepository.findByName(product.getCategory().getName()).isPresent()) {
+            Category c = categoryRepository.getByName(product.getCategory().getName());
+            product.setCategory(c);
+            product.setTitle(product.getTitle().toLowerCase());
+            return ResponseEntity.status(HttpStatus.CREATED).body(productRepository.save(product));
+        } else
+            return ResponseEntity.status(HttpStatus.CREATED).body(productRepository.save(product));
     }
 
-    @GetMapping
+    @GetMapping("/all")
     private ResponseEntity<List<Product>> listAllProducts() {
         return ResponseEntity.ok(productRepository.findAll());
     }
@@ -51,7 +49,7 @@ public class ProductController {
     }
 
     @GetMapping("/categories")
-    private  ResponseEntity<List<Category>> listAllCategories() {
+    private ResponseEntity<List<Category>> listAllCategories() {
         return ResponseEntity.ok(categoryRepository.findAll());
     }
 
@@ -61,13 +59,13 @@ public class ProductController {
     }
 
     @DeleteMapping("/{id}")
-    private ResponseEntity<String> deleteProductById(@PathVariable Integer id){
+    private ResponseEntity<String> deleteProductById(@PathVariable Integer id) {
         productRepository.deleteById(id);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Produto excluído com êxito!");
     }
 
     @DeleteMapping("/category/{id}")
-    private ResponseEntity<String> deleteCategoryById(@PathVariable Integer id){
+    private ResponseEntity<String> deleteCategoryById(@PathVariable Integer id) {
         categoryRepository.deleteById(id);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Categoria excluída com êxito!");
     }
